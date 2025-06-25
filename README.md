@@ -37,26 +37,66 @@ This project uses only the Python Standard Library (Python >= 3.8).
 ### Analyze a YAFFS2 partition dump
 
 ```bash
-usage : python nand.py [-h] --image IMAGE  [--obj_ids OBJ_IDS [OBJ_IDS …]]
-					   [--obj_id_from OBJ_ID_FROM]
-					   [--obj_id_to OBJ_ID_TO]
-					   [--snapshot SNAPSHOT]
-					   [--name NAME]
-					   [--versions VERSIONS [VERSIONS …]]
-					   [--version_from VERSION_FROM]
-					   [--version_to VERSION_TO]
-					   [--outdir OUTDIR]
-					   [--debug {0,1,2}]
-					   [--last_only]
-					   [--wide]
-					   [--autodetect]
-					   [--autodetect_only]
-					   [--pagesize PAGESIZE]
-					   [--oobsize OOBSIZE]
-					   [--endianness {big,little}]
-					   [--restore_owner]
-					   [--restore_right]
-					   [--remove_path REMOVE_PATH]
+
+usage: nand.py [-h] --image IMAGE [--obj_ids OBJ_IDS [OBJ_IDS ...]]
+                                  [--obj_id_from OBJ_ID_FROM]
+                                  [--obj_id_to OBJ_ID_TO]
+                                  [--snapshot SNAPSHOT]
+                                  [--name NAME]
+                                  [--versions VERSIONS [VERSIONS ...]]
+                                  [--version_from VERSION_FROM]
+                                  [--version_to VERSION_TO]
+                                  [--outdir OUTDIR]
+                                  [--debug {0,1,2}]
+                                  [--last_only]
+                                  [--wide]
+                                  [--autodetect]
+                                  [--autodetect_only]
+                                  [--pagesize PAGESIZE]
+                                  [--oobsize OOBSIZE]
+                                  [--endianness {big,little}]
+                                  [--restore_owner]
+                                  [--restore_right]
+                                  [--remove_path REMOVE_PATH]
+
+This program tries to forensic a YAFFS2 partition and tries to restore as much as possible
+  --> even deleted and orphans (data chunk without metadata)
+*** If you want to restore blockdevice / chardevice or --restore_owner, run me as root ***
+
+options:
+  -h, --help            show this help message and exit
+  --image IMAGE         YAFFS2 image to process/analyze
+  --obj_ids OBJ_IDS [OBJ_IDS ...]
+                        Object_id (list) to retain
+  --obj_id_from OBJ_ID_FROM
+                        Minimum Object_id to retain
+  --obj_id_to OBJ_ID_TO
+                        Maximum Object_id to retain
+  --snapshot SNAPSHOT   Reconstruct the NAND state at this timestamp (format 'YYYY-MM-DD hh:mm:ss')
+  --name NAME           Retain only the file specified
+  --versions VERSIONS [VERSIONS ...]
+                        Versions (list) to retain
+  --version_from VERSION_FROM
+                        Minimum Version number to retain
+  --version_to VERSION_TO
+                        Maximum Version number to retain
+  --outdir OUTDIR       Output Directory : if set, restoration will be done / *** for [block|char]devices requires to be root ***
+  --debug {0,1,2}       Debug level : 0 (none), 1 (base), 2 (detailed)
+  --last_only           If activated, process only the last file version. The restored files will not contain object_id and version
+  --wide                If activated, wide print (much more informations)
+  --autodetect          If activated, auto-detecting pagesize / oobsize / [littel|big]-endian
+  --autodetect_only     If activated, auto-detecting pagesize / oobsize / [littel|big]-endian and stop !
+  --pagesize PAGESIZE   Pagesize in bytes
+  --oobsize OOBSIZE     OOB size in bytes
+  --endianness {big,little}
+                        Little (default) or big endian
+  --restore_owner       If activated, restore owners *** requires to be root ***
+  --restore_right       If activated, restore rights
+  --remove_path REMOVE_PATH
+                        Only for absolute symlink : remove base path e.g. if you have dir1/dir2/dir3/link1 --> /mnt/yaffs/test1.txt
+                           --remove_path /mnt/yaffs will remove that string in the targer dir1/dir2/dir3/link1 --> test1.txt
+                           then using --outdir /tmp/toto will restore
+                           /tmp/toto/dir1/dir2/dir3/link1 --> /tmp/toto/test1.txt
 example :
 
 python nandparser.py --image snapshot_12_truncate_lorem_ORPHAN.bin --wide --outdir /tmp/foo 
