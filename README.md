@@ -55,23 +55,23 @@ This will boot a QEMU virtual machine simulating an embedded Linux system with a
 A comprehensive explanation of the YAFFS2 file format and how the tool operates is available in the docs/ directory.
 
 Topics include:
-o Internal YAFFS2 block structure
-o NAND page and OOB layout
-o Tool architecture and data flow
-o Case studies and analysis examples
+- Internal YAFFS2 block structure
+- NAND page and OOB layout
+- Tool architecture and data flow
+- Case studies and analysis examples
 
 ## YAFFS2 Snapshots
 
 The samples/ directory contains:
-o Raw YAFFS2 partition images (some intentionally corrupted or obfuscated)
-o Sample analysis scenarios with accompanying notes or comments
+- Raw YAFFS2 partition images (some intentionally corrupted or obfuscated)
+- Sample analysis scenarios with accompanying notes or comments
 
 ## TODO
 
-o Improved CLI and user interface
-o Partial support for YAFFS1
-o Enhanced handling of bad blocks and spare areas
-o Automatic HTML or JSON reporting
+- Improved CLI and user interface
+- Partial support for YAFFS1
+- Enhanced handling of bad blocks and spare areas
+- Automatic HTML or JSON reporting
 
 ## License
 
@@ -80,10 +80,10 @@ This project is released under the MIT License.
 ## Contributing
 
 Contributions are welcome!
-o Fork this repository
-o Create a new branch (git checkout -b feature/my-feature)
-o Commit your changes (git commit -am 'Add new feature')
-o Push to your fork (git push origin feature/my-feature)
-o Open a Pull Request
+- Fork this repository
+- Create a new branch (git checkout -b feature/my-feature)
+- Commit your changes (git commit -am 'Add new feature')
+- Push to your fork (git push origin feature/my-feature)
+- Open a Pull Request
 
 
