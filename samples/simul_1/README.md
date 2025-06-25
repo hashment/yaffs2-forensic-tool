@@ -4,10 +4,10 @@ This directory contains YAFFS2 images for testing.
 
 ## Operating procedure
 
-First of all, run the test_env
+To generate all of them, in the /test_env, run :
 
 ```bash
-cd test_env
+cd ../test_env
 ./run.sh
 
 [    0.000000] Initializing cgroup subsys cpuset
@@ -191,7 +191,7 @@ cd test_env
 [    0.976499] ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 11
 [    0.976755] virtio-pci 0000:00:04.0: PCI INT A -> Link[LNKD] -> GSI 11 (level, high) -> IRQ 11
 [    0.978337] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
-�[    1.247870] serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+[    1.247870] serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
 [    1.275802] 00:08: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
 [    1.281865] Non-volatile memory driver v1.3
 [    1.282480] Linux agpgart interface v0.103
@@ -509,9 +509,9 @@ Invalid read at addr 0x20000004, size 1, region '(null)', reason: rejected
 ~ #
 ```
 
-When the system is started, there will have a /mnt/disk partition (ext2).
+When the system is started, there will have a /mnt/disk partition (ext2) mounted.
 
-simply run :
+Then simply run :
 
 ```bash
 ~ # ./simul_1
@@ -1151,6 +1151,15 @@ Dumping data starting at 0x00000000 and ending at 0x04000000...
 
 ```
 
-all snapshots are saved in /mnt/disk/result/simul_1
+All snapshots are saved in /mnt/disk/result/simul_1
+
+Then exit the QEMU emulation with 
+
+```bash
+~ # halt -f
+```
+If you want to explore one of them, *do not forget* to unzip it first before running nand.py tools
+
+
 
 
