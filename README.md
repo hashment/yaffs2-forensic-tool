@@ -80,9 +80,10 @@ options:
                         Minimum Version number to retain
   --version_to VERSION_TO
                         Maximum Version number to retain
-  --outdir OUTDIR       Output Directory : if set, restoration will be done / *** for [block|char]devices requires to be root ***
+  --outdir OUTDIR       Output Directory : if set, restoration will be done / **for [block|char]devices requires to be root**
   --debug {0,1,2}       Debug level : 0 (none), 1 (base), 2 (detailed)
-  --last_only           If activated, process only the last file version. The restored files will not contain object_id and version
+  --last_only           If activated, process only the last file version. The restored files will not contain object_id
+                        and version
   --wide                If activated, wide print (much more informations)
   --autodetect          If activated, auto-detecting pagesize / oobsize / [littel|big]-endian
   --autodetect_only     If activated, auto-detecting pagesize / oobsize / [littel|big]-endian and stop !
@@ -93,7 +94,8 @@ options:
   --restore_owner       If activated, restore owners *** requires to be root ***
   --restore_right       If activated, restore rights
   --remove_path REMOVE_PATH
-                        Only for absolute symlink : remove base path e.g. if you have dir1/dir2/dir3/link1 --> /mnt/yaffs/test1.txt
+                        Only for absolute symlink : remove base path
+                           e.g. if you have dir1/dir2/dir3/link1 --> /mnt/yaffs/test1.txt
                            --remove_path /mnt/yaffs will remove that string in the targer dir1/dir2/dir3/link1 --> test1.txt
                            then using --outdir /tmp/toto will restore
                            /tmp/toto/dir1/dir2/dir3/link1 --> /tmp/toto/test1.txt
