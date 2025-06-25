@@ -36,6 +36,7 @@ This project uses only the Python Standard Library (Python >= 3.8).
 
 ### Analyze a YAFFS2 partition dump
 
+```bash
 usage : python nandparser.py [-h] --image IMAGE 	[--obj_ids OBJ_IDS [OBJ_IDS …]]
 					[--obj_id_from OBJ_ID_FROM]
 					[--obj_id_to OBJ_ID_TO]
@@ -58,7 +59,6 @@ usage : python nandparser.py [-h] --image IMAGE 	[--obj_ids OBJ_IDS [OBJ_IDS …
 					[--remove_path REMOVE_PATH]
 example :
 
-```bash
 python nandparser.py --image snapshot_12_truncate_lorem_ORPHAN.bin --wide -outdir /tmp/foo 
 ```
 
@@ -67,7 +67,7 @@ This will show everything present in the YAFFS2 image and restore as much as pos
 
 ### Launch the test environment
 
---> go to /test_env directory
+-> go to /test_env directory
 
 ## Documentation
 
