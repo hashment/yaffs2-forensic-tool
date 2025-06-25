@@ -624,9 +624,12 @@ First of all you need to mount ext2 partition named rootfs_container.img with co
 ```
 
 In recup directory, there will be :
-- result
-  - simul_2
-    - snapshot_01_add_big_lorem.bin.gz
-    - snapshot_02_truncate_big_lorem.bin.gz
+-recup
+  - snapshot_00_empty.bin.gz
+  - files_in_fs
+  - result
+    - simul_2
+      - snapshot_01_add_big_lorem.bin.gz
+      - snapshot_02_truncate_big_lorem.bin.gz
 
 If you want to explore one of them, *do not forget* to unzip it first before running nand.py tools.
