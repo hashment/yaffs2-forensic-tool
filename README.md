@@ -1,5 +1,10 @@
 # YAFFS2 Forensic Toolkit
 
+** BE CAREFULL Work in progress **
+
+
+
+
 **A forensic analysis tool for YAFFS2 partitions**, enabling extraction, parsing, and inspection of data from embedded systems using the YAFFS2 file system.
 
 ## Project Structure
