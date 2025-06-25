@@ -1,7 +1,6 @@
 # Launch the test environment
 
 ```bash
-cd test_env
 ./run.sh
 ```
 
