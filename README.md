@@ -64,6 +64,93 @@ python nandparser.py --image snapshot_12_truncate_lorem_ORPHAN.bin --wide --outd
 
 This will show everything present in the YAFFS2 image and restore as much as possible in /tmp/foo
 
+example :
+
+```bash
+#> python nand.py --image snapshot_12_truncate_lorem_ORPHAN.bin  --autodetect
+==> Best format detected : 2048 / 64 in little-endian (score 125)
+Processing image snapshot_12_truncate_lorem_ORPHAN.bin with pagesize 2048 and oobsize 64 in little-endian ...
+
+mode           uid     gid        size  ctime          obj.ID    ver.  name                                              
+-rw-r--r--       0       0           5  2025-06-05        257       1  test1.txt                                         
+drwxr-xr-x       0       0           0  2025-06-05        258       0  dir1                                              
+drwxr-xr-x       0       0           0  2025-06-05        258       1  dir1                                              
+drwxr-xr-x       0       0           0  2025-06-05        258       2  dir1                                              
+drwxr-xr-x       0       0           0  2025-06-05        258       3  dir1                                              
+drwxr-xr-x       0       0           0  2025-06-05        259       0  dir1/dir2                                         
+drwxr-xr-x       0       0           0  2025-06-05        259       1  dir1/dir2                                         
+drwxr-xr-x       0       0           0  2025-06-05        259       2  dir1/dir2                                         
+drwxr-xr-x       0       0           0  2025-06-05        259       3  dir1/dir2                                         
+drwxr-xr-x       0       0           0  2025-06-05        259       4  dir1/dir2                                         
+drwxr-xr-x       0       0           0  2025-06-05        260       0  dir1/dir2/dir3                                    
+drwxr-xr-x       0       0           0  2025-06-05        260       1  dir1/dir2/dir3                                    
+drwxr-xr-x       0       0           0  2025-06-05        261       0  dir1/dir4                                         
+drwxr-xr-x       0       0           0  2025-06-05        261       1  dir1/dir4                                         
+drwxr-xr-x       0       0           0  2025-06-05        261       2  dir1/dir4                                         
+drwxr-xr-x       0       0           0  2025-06-05        261       3  dir1/dir41                                        
+drwxr-xr-x       0       0           0  2025-06-05        261       4  dir1/dir41                                        
+drwxr-xr-x       0       0           0  2025-06-05        262       0  dir1/dir4/dir5                                    
+drwxr-xr-x       0       0           0  2025-06-05        262       1  dir1/dir4/dir5                                    
+drwxr-xr-x       0       0           0  2025-06-05        262       2  dir1/dir2/dir5.moved                              
+drwxr-xr-x       0       0           0  2025-06-05        262       3  unlinked                                          
+drwxr-xr-x       0       0           0  2025-06-05        262       4  deleted                                           
+drwxr-xr-x       0       0           0  2025-06-05        263       0  dir6                                              
+drwxr-xr-x       0       0           0  2025-06-05        263       1  dir6                                              
+lrwxrwxrwx       0       0           0  2025-06-05        264       0  dir1/dir2/dir3/link1 -> ../../../test1.txt        
+prw-r--r--       0       0           0  2025-06-05        265       0  dir1/dir2/named_pipe                              
+brw-r--r--       0       0           0  2025-06-05        266       0  dir1/dir2/dir5/block_device                       
+brw-r--r--       0       0           0  2025-06-05        266       1  unlinked                                          
+brw-r--r--       0       0           0  2025-06-05        266       2  deleted                                           
+srwxr-xr-x       0       0           0  2025-06-05        267       0  dir6/aSocket.sock                                 
+-rw-r--r--       0       0           5  2025-06-05        268       1  dir1/dir41/test2.txt                              
+-rw-r--r--       0       0         445  2025-06-05        269       1  dir1/lorem.txt                                    
+-rw-r--r--       0       0         300  2025-06-05        269       2  dir1/lorem.txt                                    
+-rw-r--r--       0       0         300  2025-06-05        269       3  dir1/lorem.txt                                    
+-rw-r--r--       0       0          10  1970-01-01        513       0  orphan
+
+#> $ python nand.py --image snapshot_12_truncate_lorem_ORPHAN.bin  --autodetect --wide
+==> Best format detected : 2048 / 64 in little-endian (score 125)
+Processing image snapshot_12_truncate_lorem_ORPHAN.bin with pagesize 2048 and oobsize 64 in little-endian ...
+
+   obj.ID    ver.   parentId  name                                                      mode        size     uid     gid                ctime                atime                mtime    sequence      offset  sha1sum 
+      257       1          1  test1.txt                                           -rw-r--r--           5       0       0  2025-06-05 15:25:40  2025-06-05 15:25:40  2025-06-05 15:25:40        4097        2112  b444ac06613fc8d63795be9ad0beaf55011936ac
+      258       0          1  dir1                                                drwxr-xr-x           0       0       0  2025-06-05 15:25:45  2025-06-05 15:25:45  2025-06-05 15:25:45        4097        6336  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      258       1          1  dir1                                                drwxr-xr-x           0       0       0  2025-06-05 15:25:45  2025-06-05 15:25:45  2025-06-05 15:25:45        4097       23232  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      258       2          1  dir1                                                drwxr-xr-x           0       0       0  2025-06-05 15:26:26  2025-06-05 15:25:45  2025-06-05 15:26:26        4097       63360  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      258       3          1  dir1                                                drwxr-xr-x           0       0       0  2025-06-05 15:26:38  2025-06-05 15:25:45  2025-06-05 15:26:38        4097       80256  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      259       0        258  dir1/dir2                                           drwxr-xr-x           0       0       0  2025-06-05 15:25:45  2025-06-05 15:25:45  2025-06-05 15:25:45        4097        8448  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      259       1        258  dir1/dir2                                           drwxr-xr-x           0       0       0  2025-06-05 15:25:45  2025-06-05 15:25:45  2025-06-05 15:25:45        4097       21120  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      259       2        258  dir1/dir2                                           drwxr-xr-x           0       0       0  2025-06-05 15:25:57  2025-06-05 15:25:45  2025-06-05 15:25:57        4097       33792  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      259       3        258  dir1/dir2                                           drwxr-xr-x           0       0       0  2025-06-05 15:26:14  2025-06-05 15:25:45  2025-06-05 15:26:14        4097       48576  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      259       4        258  dir1/dir2                                           drwxr-xr-x           0       0       0  2025-06-05 15:26:20  2025-06-05 15:25:45  2025-06-05 15:26:20        4097       59136  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      260       0        259  dir1/dir2/dir3                                      drwxr-xr-x           0       0       0  2025-06-05 15:25:45  2025-06-05 15:25:45  2025-06-05 15:25:45        4097       10560  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      260       1        259  dir1/dir2/dir3                                      drwxr-xr-x           0       0       0  2025-06-05 15:25:51  2025-06-05 15:25:45  2025-06-05 15:25:51        4097       29568  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      261       0        258  dir1/dir4                                           drwxr-xr-x           0       0       0  2025-06-05 15:25:45  2025-06-05 15:25:45  2025-06-05 15:25:45        4097       12672  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      261       1        258  dir1/dir4                                           drwxr-xr-x           0       0       0  2025-06-05 15:25:45  2025-06-05 15:25:45  2025-06-05 15:25:45        4097       19008  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      261       2        258  dir1/dir4                                           drwxr-xr-x           0       0       0  2025-06-05 15:26:14  2025-06-05 15:25:45  2025-06-05 15:26:14        4097       46464  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      261       3        258  dir1/dir41                                          drwxr-xr-x           0       0       0  2025-06-05 15:26:14  2025-06-05 15:25:45  2025-06-05 15:26:14        4097       61248  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      261       4        258  dir1/dir41                                          drwxr-xr-x           0       0       0  2025-06-05 15:26:32  2025-06-05 15:25:45  2025-06-05 15:26:32        4097       71808  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      262       0        261  dir1/dir4/dir5                                      drwxr-xr-x           0       0       0  2025-06-05 15:25:45  2025-06-05 15:25:45  2025-06-05 15:25:45        4097       14784  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      262       1        261  dir1/dir4/dir5                                      drwxr-xr-x           0       0       0  2025-06-05 15:26:03  2025-06-05 15:25:45  2025-06-05 15:26:03        4097       38016  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      262       2        259  dir1/dir2/dir5.moved                                drwxr-xr-x           0       0       0  2025-06-05 15:26:03  2025-06-05 15:25:45  2025-06-05 15:26:03        4097       44352  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      262       3          3  unlinked                                            drwxr-xr-x           0       0       0  2025-06-05 15:26:20  2025-06-05 15:25:45  2025-06-05 15:26:20        4097       54912  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      262       4          4  deleted                                             drwxr-xr-x           0       0       0  2025-06-05 15:26:20  2025-06-05 15:25:45  2025-06-05 15:26:20        4097       57024  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      263       0          1  dir6                                                drwxr-xr-x           0       0       0  2025-06-05 15:25:45  2025-06-05 15:25:45  2025-06-05 15:25:45        4097       16896  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      263       1          1  dir6                                                drwxr-xr-x           0       0       0  2025-06-05 15:26:09  2025-06-05 15:25:45  2025-06-05 15:26:09        4097       42240  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      264       0        260  dir1/dir2/dir3/link1 -> ../../../test1.txt          lrwxrwxrwx           0       0       0  2025-06-05 15:25:51  2025-06-05 15:25:51  2025-06-05 15:25:51        4097       27456  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      265       0        259  dir1/dir2/named_pipe                                prw-r--r--           0       0       0  2025-06-05 15:25:57  2025-06-05 15:25:57  2025-06-05 15:25:57        4097       31680  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      266       0        262  dir1/dir2/dir5/block_device                         brw-r--r--           0       0       0  2025-06-05 15:26:03  2025-06-05 15:26:03  2025-06-05 15:26:03        4097       35904  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      266       1          3  unlinked                                            brw-r--r--           0       0       0  2025-06-05 15:26:03  2025-06-05 15:26:03  2025-06-05 15:26:03        4097       50688  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      266       2          4  deleted                                             brw-r--r--           0       0       0  2025-06-05 15:26:03  2025-06-05 15:26:03  2025-06-05 15:26:03        4097       52800  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      267       0        263  dir6/aSocket.sock                                   srwxr-xr-x           0       0       0  2025-06-05 15:26:09  2025-06-05 15:26:09  2025-06-05 15:26:09        4097       40128  da39a3ee5e6b4b0d3255bfef95601890afd80709
+      268       1        261  dir1/dir41/test2.txt                                -rw-r--r--           5       0       0  2025-06-05 15:26:32  2025-06-05 15:26:32  2025-06-05 15:26:32        4097       69696  109f4b3c50d7b0df729d299bc6f8e9ef9066971f
+      269       1        258  dir1/lorem.txt                                      -rw-r--r--         445       0       0  2025-06-05 15:26:38  2025-06-05 15:26:38  2025-06-05 15:26:38        4097       78144  cd36b370758a259b34845084a6cc38473cb95e27
+      269       2        258  dir1/lorem.txt                                      -rw-r--r--         300       0       0  2025-06-05 15:26:43  2025-06-05 15:26:38  2025-06-05 15:26:43        4097       84480  60accecac6e1cc29957ae0b03b8e9033fd08882d
+      269       3        258  dir1/lorem.txt                                      -rw-r--r--         300       0       0  2025-06-05 15:26:43  2025-06-05 15:26:38  2025-06-05 15:26:43        4097       86592  60accecac6e1cc29957ae0b03b8e9033fd08882d
+      513       0          1  orphan                                              -rw-r--r--          10       0       0  1970-01-01 01:00:01  1970-01-01 01:00:00  1970-01-01 01:00:01        8193    69201792  455bcd5917c990aa6cb6ef04028dbeaac5a176ce
+```
+
+All objects listed are restorable (except UNIX socket)
 
 ### Launch the test environment
 
