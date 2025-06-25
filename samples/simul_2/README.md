@@ -613,9 +613,20 @@ Then exit the QEMU emulation with
 ```bash
 ~ # halt -f
 ```
-If you want to explore one of them, *do not forget* to unzip it first before running nand.py tools
 
+# Explore Snapshot
 
+First of all you need to mount ext2 partition named rootfs_container.img with command :
 
+```bash
+#> mkdir -p recup
+#> sudo mount -t ext2 -o loop  rootfs_container.img  recup/
+```
 
+In recup directory, there will be :
+- result
+  - simul_2
+    - snapshot_01_add_big_lorem.bin.gz
+    - snapshot_02_truncate_big_lorem.bin.gz
 
+If you want to explore one of them, *do not forget* to unzip it first before running nand.py tools.
