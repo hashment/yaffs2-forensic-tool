@@ -521,20 +521,20 @@ will do all of that operation on the filesystem
 
 Then :
 
-1- Create /mnt/yaffs/file1.txt
-2- Create chained directories /mnt/yaffs/dir1/dir2/dir3
+-1- Create /mnt/yaffs/file1.txt
+-2- Create chained directories /mnt/yaffs/dir1/dir2/dir3
    Create chained directories /mnt/yaffs/dir1/dir4/dir5
    Create chained directories /mnt/yaffs/dir6
-3- Create /mnt/yaffs/dir1/dir2/dir3/link1 -> ../../../test1.txt
-4- Create named pipe /mnt/yaffs/dir1/dir2/named_pipe
-5- Create block device /mnt/yaffs/dir1/dir4/dir5/block_device
-6- Create unix socket /mnt/yaffs/dir6/aSocket.sock
-7- Move directory /mnt/yaffs/dir1/dir4/dir5 in /mnt/yaffs/dir1/dir2
-8- Delete /mnt/yaffs/dir1/dir2/dir5
-9- Rename /mnt/yaffs/dir1/dir4 to /mnt/yaffs/dir1/dir41
-10- Create /mnt/yaffs/dir1/dir41/file2.txt
-11- Create /mnt/yaffs/dir1/lorem.txt
-12- Truncate /mnt/yaffs/dir1/lorem.txt to 300 bytes
+-3- Create /mnt/yaffs/dir1/dir2/dir3/link1 -> ../../../test1.txt
+-4- Create named pipe /mnt/yaffs/dir1/dir2/named_pipe
+-5- Create block device /mnt/yaffs/dir1/dir4/dir5/block_device
+-6- Create unix socket /mnt/yaffs/dir6/aSocket.sock
+-7- Move directory /mnt/yaffs/dir1/dir4/dir5 in /mnt/yaffs/dir1/dir2
+-8- Delete /mnt/yaffs/dir1/dir2/dir5
+-9- Rename /mnt/yaffs/dir1/dir4 to /mnt/yaffs/dir1/dir41
+-10- Create /mnt/yaffs/dir1/dir41/file2.txt
+-11- Create /mnt/yaffs/dir1/lorem.txt
+-12- Truncate /mnt/yaffs/dir1/lorem.txt to 300 bytes
 
 
 ## simulation 2
