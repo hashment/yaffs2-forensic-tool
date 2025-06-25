@@ -28,11 +28,9 @@ This toolkit is designed to assist forensic analysts, reverse engineers, and sec
 
 ### Python Dependencies
 
-Install required packages with:
+No external dependencies required.
 
-```bash
-pip install -r requirements.txt
-```
+This project uses only the Python Standard Library (Python >= 3.8).
 
 ## Usage
 
