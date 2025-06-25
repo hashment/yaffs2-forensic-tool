@@ -4,7 +4,21 @@ This directory contains YAFFS2 images for testing.
 
 ## Operating procedure
 
-To generate all of them, in the /test_env, run :
+To generate all of them, in the /test_env, run the run.sh script that contains :
+```bash
+#!/bin/bash
+qemu-system-x86_64  \
+	-kernel arch/x86_64/boot/bzImage \
+  -m 512M \
+	-initrd ../initramfs.cpio.gz \
+  -drive file=../rootfs_container.img,format=raw,if=virtio \
+  -d guest_errors \
+  -nographic \
+	-serial mon:stdio \
+	-append "console=ttyS0 console=/dev/console init=/init"
+```
+
+**Note** : The ext2 filesystem named rootfs_container.img can be mount after in the host environment to analyze snapshots.
 
 ```bash
 cd ../test_env
