@@ -521,8 +521,8 @@ will do all of that operation on the filesystem
 
 Then :
 
-1- First item
-2- Second item
+**1-** First item
+**2-** Second item
 
 - Create /mnt/yaffs/file1.txt
 - Create chained directories /mnt/yaffs/dir1/dir2/dir3
