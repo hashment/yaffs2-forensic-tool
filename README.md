@@ -150,7 +150,12 @@ Processing image snapshot_12_truncate_lorem_ORPHAN.bin with pagesize 2048 and oo
       513       0          1  orphan                                              -rw-r--r--          10       0       0  1970-01-01 01:00:01  1970-01-01 01:00:00  1970-01-01 01:00:01        8193    69201792  455bcd5917c990aa6cb6ef04028dbeaac5a176ce
 ```
 
-All objects listed are restorable (except UNIX socket)
+All objects listed are restorable (except UNIX socket) : just add --outdir directory
+
+**Note** we can seen/restore every versions even orphan.
+
+An orphan is a file without header informations (no owner/group, size, etc.)
+
 
 ### Launch the test environment
 
