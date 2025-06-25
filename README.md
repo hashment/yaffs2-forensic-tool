@@ -59,7 +59,7 @@ usage : python nandparser.py [-h] --image IMAGE 	[--obj_ids OBJ_IDS [OBJ_IDS …
 					[--remove_path REMOVE_PATH]
 example :
 
-python nandparser.py --image snapshot_12_truncate_lorem_ORPHAN.bin --wide -outdir /tmp/foo 
+python nandparser.py --image snapshot_12_truncate_lorem_ORPHAN.bin --wide --outdir /tmp/foo 
 ```
 
 This will show everything present in the YAFFS2 image and restore as much as possible in /tmp/foo
