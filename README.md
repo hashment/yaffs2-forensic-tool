@@ -37,26 +37,26 @@ This project uses only the Python Standard Library (Python >= 3.8).
 ### Analyze a YAFFS2 partition dump
 
 ```bash
-usage : python nandparser.py [-h] --image IMAGE 	[--obj_ids OBJ_IDS [OBJ_IDS …]]
-					[--obj_id_from OBJ_ID_FROM]
-					[--obj_id_to OBJ_ID_TO]
-					[--snapshot SNAPSHOT]
-					[--name NAME]
-					[--versions VERSIONS [VERSIONS …]]
-					[--version_from VERSION_FROM]
-					[--version_to VERSION_TO]
-					[--outdir OUTDIR]
-					[--debug {0,1,2}]
-					[--last_only]
-					[--wide]
-					[--autodetect]
-					[--autodetect_only]
-					[--pagesize PAGESIZE]
-					[--oobsize OOBSIZE]
-					[--endianness {big,little}]
-					[--restore_owner]
-					[--restore_right]
-					[--remove_path REMOVE_PATH]
+usage : python nand.py [-h] --image IMAGE  [--obj_ids OBJ_IDS [OBJ_IDS …]]
+					   [--obj_id_from OBJ_ID_FROM]
+					   [--obj_id_to OBJ_ID_TO]
+					   [--snapshot SNAPSHOT]
+					   [--name NAME]
+					   [--versions VERSIONS [VERSIONS …]]
+					   [--version_from VERSION_FROM]
+					   [--version_to VERSION_TO]
+					   [--outdir OUTDIR]
+					   [--debug {0,1,2}]
+					   [--last_only]
+					   [--wide]
+					   [--autodetect]
+					   [--autodetect_only]
+					   [--pagesize PAGESIZE]
+					   [--oobsize OOBSIZE]
+					   [--endianness {big,little}]
+					   [--restore_owner]
+					   [--restore_right]
+					   [--remove_path REMOVE_PATH]
 example :
 
 python nandparser.py --image snapshot_12_truncate_lorem_ORPHAN.bin --wide --outdir /tmp/foo 
@@ -66,6 +66,8 @@ This will show everything present in the YAFFS2 image and restore as much as pos
 
 
 ### Launch the test environment
+
+It's a QEMU emulation.
 
 -> go to /test_env directory
 
