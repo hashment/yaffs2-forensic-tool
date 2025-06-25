@@ -505,3 +505,50 @@ Invalid read at addr 0x20000004, size 1, region '(null)', reason: rejected
 ```
 
 This will boot a QEMU virtual machine simulating an embedded Linux system with a YAFFS2 NAND partition, allowing realistic file creation and extraction testing.
+
+In the root directory, you've 2 simulations :
+
+## simulation 1
+
+```bash
+~ # ./simul_1
+```
+will do all of that operation on the filesystem
+
+- Erasing flash on /dev/mtd1
+- Flashing /dev/mtd1
+- Mounting /dev/mtdblock1 on /mnt/yaffs (YAFFS2)
+
+Then :
+
+1- Create /mnt/yaffs/file1.txt
+2- Create chained directories /mnt/yaffs/dir1/dir2/dir3
+   Create chained directories /mnt/yaffs/dir1/dir4/dir5
+   Create chained directories /mnt/yaffs/dir6
+3- Create /mnt/yaffs/dir1/dir2/dir3/link1 -> ../../../test1.txt
+4- Create named pipe /mnt/yaffs/dir1/dir2/named_pipe
+5- Create block device /mnt/yaffs/dir1/dir4/dir5/block_device
+6- Create unix socket /mnt/yaffs/dir6/aSocket.sock
+7- Move directory /mnt/yaffs/dir1/dir4/dir5 in /mnt/yaffs/dir1/dir2
+8- Delete /mnt/yaffs/dir1/dir2/dir5
+9- Rename /mnt/yaffs/dir1/dir4 to /mnt/yaffs/dir1/dir41
+10- Create /mnt/yaffs/dir1/dir41/file2.txt
+11- Create /mnt/yaffs/dir1/lorem.txt
+12- Truncate /mnt/yaffs/dir1/lorem.txt to 300 bytes
+
+
+## simulation 2
+
+```bash
+~ # ./simul_2
+```
+will do all of that operation on the filesystem
+
+- Erasing flash on /dev/mtd1
+- Flashing /dev/mtd1
+- Mounting /dev/mtdblock1 on /mnt/yaffs (YAFFS2)
+
+Then :
+
+1- Create /mnt/yaffs/big_lorem.txt (6639 bytes)
+2- Truncate /mnt/yaffs/big_lorem.txt to 2200 bytes
