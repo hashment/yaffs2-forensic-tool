@@ -184,7 +184,7 @@
 [    0.666193] ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 11
 [    0.666427] virtio-pci 0000:00:04.0: PCI INT A -> Link[LNKD] -> GSI 11 (level, high) -> IRQ 11
 [    0.667967] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
-�[    0.937787] serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+[    0.937787] serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
 [    0.966164] 00:08: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
 [    0.971866] Non-volatile memory driver v1.3
 [    0.972356] Linux agpgart interface v0.103
