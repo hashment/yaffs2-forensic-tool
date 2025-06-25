@@ -1,5 +1,7 @@
 # Launch the test environment
 
+Simply :
+
 ```bash
 ./run.sh
 
