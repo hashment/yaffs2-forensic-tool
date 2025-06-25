@@ -534,6 +534,10 @@ Then :
 11. Create /mnt/yaffs/dir1/lorem.txt
 12. Truncate /mnt/yaffs/dir1/lorem.txt to 300 bytes
 
+All snapshots, done juste after each previous operations are stored in /samples/simul_1 directory
+
+**Be carefull** all of them are compressed. Uncompress them before exploration with nand.py tool
+ 
 
 ## simulation 2
 
@@ -550,3 +554,8 @@ Then :
 
 1. Create /mnt/yaffs/big_lorem.txt (6639 bytes)
 2. Truncate /mnt/yaffs/big_lorem.txt to 2200 bytes
+
+
+All snapshots, done juste after each previous operations are stored in /samples/simul_2 directory
+
+**Be carefull** all of them are compressed. Uncompress them before exploration with nand.py tool
