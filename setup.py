@@ -4,8 +4,8 @@ setup(
     name='yaffs2-forensic',
     version='0.1.0',
     description='YAFFS2 forensic analysis toolkit for NAND flash dumps',
-    author='Ton Nom',
-    author_email='ton.email@example.com',
+    author='Hashment',
+    author_email='buhtig@hashment.com',
     py_modules=['nand', 'Yaffs2Forensic'],
     classifiers=[
         'Programming Language :: Python :: 3',
