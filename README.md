@@ -14,7 +14,7 @@ This repository includes:
   - `initramfs.cpio.gz` – Initramfs root filesystem used by QEMU.
   - `root_container.img` – EXT2 partition image.
   - `bzImage` – Linux 3.2.0 kernel image.
-- [samples/](samples) – YAFFS2 partition snapshots for analysis and experimentation.
+- `samples/` – YAFFS2 partition snapshots for analysis and experimentation.
   - [simul_1](samples/simul_1) - First pool of modifications
   - [simul_2](samples/simul_2) - Second pool of modifications
 
@@ -207,11 +207,11 @@ An orphan is a file without header informations (no owner/group, size, etc.)
 
 It's a QEMU emulation.
 
--> go to /test_env directory
+-> go to [test_env/](test_env) directory
 
 ## Documentation
 
-A comprehensive explanation of the YAFFS2 file format and how the tool operates is available in the docs/ directory.
+A comprehensive explanation of the YAFFS2 file format and how the tool operates is available in the [docs/](docs) directory.
 
 Topics include:
 - Internal YAFFS2 block structure
@@ -221,7 +221,7 @@ Topics include:
 
 ## YAFFS2 Snapshots
 
-The samples/ directory contains:
+The [samples/](samples) directory contains:
 - Raw YAFFS2 partition images (some intentionally corrupted or obfuscated)
 - Sample analysis scenarios with accompanying notes or comments
 
