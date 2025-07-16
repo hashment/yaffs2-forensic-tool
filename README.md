@@ -38,7 +38,7 @@ This project uses only the Python Standard Library (Python >= 3.8).
 
 ```bash
 
-usage: nand.py [-h] --image IMAGE [--obj_ids OBJ_IDS [OBJ_IDS ...]]
+usage: yaffs2_parser.py [-h] --image IMAGE [--obj_ids OBJ_IDS [OBJ_IDS ...]]
                                   [--obj_id_from OBJ_ID_FROM]
                                   [--obj_id_to OBJ_ID_TO]
                                   [--snapshot SNAPSHOT]
@@ -101,7 +101,7 @@ options:
                            /tmp/toto/dir1/dir2/dir3/link1 --> /tmp/toto/test1.txt
 example :
 
-python nandparser.py --image snapshot_12_truncate_lorem_ORPHAN.bin --wide --outdir /tmp/foo 
+python yaffs2_parser.py --image snapshot_12_truncate_lorem_ORPHAN.bin --wide --outdir /tmp/foo 
 ```
 
 This will show everything present in the YAFFS2 image and restore as much as possible in /tmp/foo
@@ -109,7 +109,7 @@ This will show everything present in the YAFFS2 image and restore as much as pos
 example :
 
 ```bash
-#> python nand.py --image snapshot_12_truncate_lorem_ORPHAN.bin  --autodetect
+#> python yaffs2_parser.py --image snapshot_12_truncate_lorem_ORPHAN.bin  --autodetect
 ==> Best format detected : 2048 / 64 in little-endian (score 125)
 Processing image snapshot_12_truncate_lorem_ORPHAN.bin with pagesize 2048 and oobsize 64 in little-endian ...
 
@@ -149,8 +149,10 @@ srwxr-xr-x       0       0           0  2025-06-05        267       0  dir6/aSoc
 -rw-r--r--       0       0         300  2025-06-05        269       2  dir1/lorem.txt                                    
 -rw-r--r--       0       0         300  2025-06-05        269       3  dir1/lorem.txt                                    
 -rw-r--r--       0       0          10  1970-01-01        513       0  orphan
+```
 
-#> $ python nand.py --image snapshot_12_truncate_lorem_ORPHAN.bin  --autodetect --wide
+```bash
+#> $ python yaffs2_parser.py --image snapshot_12_truncate_lorem_ORPHAN.bin  --autodetect --wide
 ==> Best format detected : 2048 / 64 in little-endian (score 125)
 Processing image snapshot_12_truncate_lorem_ORPHAN.bin with pagesize 2048 and oobsize 64 in little-endian ...
 
