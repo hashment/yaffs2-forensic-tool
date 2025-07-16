@@ -15,8 +15,8 @@ This repository includes:
   - `root_container.img` – EXT2 partition image.
   - `bzImage` – Linux 3.2.0 kernel image.
 - `samples/` – YAFFS2 partition snapshots for analysis and experimentation.
-  - simul_1 - First pool of modifications
-  - simul_2 - Second pool of modifications
+  - `simul_1` - First pool of modifications
+  - `simul_2` - Second pool of modifications
 
 ## Purpose
 
