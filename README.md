@@ -8,7 +8,7 @@ This repository includes:
 
 - `yaffs2_parser.py` – Main program for YAFFS2 parsing and analysis.
 - `Yaffs2Forensic.py` – Core Python class implementing YAFFS2 forensic analysis logic.
-- `docs/` – Complete documentation on the YAFFS2 file system and analysis methodology.
+- [docs/](docs) – Complete documentation on the YAFFS2 file system and analysis methodology.
 - `test_env/` – Fully functional test environment featuring:
   - `run.sh` – Script to launch a QEMU virtual machine.
   - `initramfs.cpio.gz` – Initramfs root filesystem used by QEMU.
