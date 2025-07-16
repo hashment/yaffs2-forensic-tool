@@ -6,7 +6,7 @@
 
 This repository includes:
 
-- `nand.py` – Main program for YAFFS2 parsing and analysis.
+- `yaffs2_parser.py` – Main program for YAFFS2 parsing and analysis.
 - `Yaffs2Forensic.py` – Core Python class implementing YAFFS2 forensic analysis logic.
 - `docs/` – Complete documentation on the YAFFS2 file system and analysis methodology.
 - `test_env/` – Fully functional test environment featuring:
@@ -15,6 +15,8 @@ This repository includes:
   - `root_container.img` – EXT2 partition image.
   - `bzImage` – Linux 3.2.0 kernel image.
 - `samples/` – YAFFS2 partition snapshots for analysis and experimentation.
+  - simul_1 - First pool of modifications
+  - simul_2 - Second pool of modifications
 
 ## Purpose
 
