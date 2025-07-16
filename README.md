@@ -9,14 +9,14 @@ This repository includes:
 - `yaffs2_parser.py` – Main program for YAFFS2 parsing and analysis.
 - `Yaffs2Forensic.py` – Core Python class implementing YAFFS2 forensic analysis logic.
 - [docs/](docs) – Complete documentation on the YAFFS2 file system and analysis methodology.
-- `test_env/` – Fully functional test environment featuring:
+- [test_env/](test_env) – Fully functional test environment featuring:
   - `run.sh` – Script to launch a QEMU virtual machine.
   - `initramfs.cpio.gz` – Initramfs root filesystem used by QEMU.
   - `root_container.img` – EXT2 partition image.
   - `bzImage` – Linux 3.2.0 kernel image.
-- `samples/` – YAFFS2 partition snapshots for analysis and experimentation.
-  - `simul_1` - First pool of modifications
-  - `simul_2` - Second pool of modifications
+- [samples/](samples) – YAFFS2 partition snapshots for analysis and experimentation.
+  - [simul_1](samples/simul_1) - First pool of modifications
+  - [simul_2](samples/simul_2) - Second pool of modifications
 
 ## Purpose
 
