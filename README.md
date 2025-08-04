@@ -1,6 +1,27 @@
-# YAFFS2 Forensic Toolkit
+# YAFFS2 Forensic Tool – Python-Based Partition Dumper & Recovery
 
-**A forensic analysis tool for YAFFS2 partitions**, enabling extraction, parsing, and inspection of data from embedded systems using the YAFFS2 file system.
+A standalone forensic tool written in pure Python to extract, parse, and recover everything from YAFFS2 flash partitions:
+- Reconstruct all file versions
+- Recover deleted and orphaned files
+- Full metadata analysis and low-level parsing
+- No dependencies, fully portable
+
+## 🔍 Features
+
+- 🐍 100% Python (no external dependencies)
+- 🗃️ Extract full file trees from YAFFS2 images
+- 🧻 Recover **deleted files**, **orphan inodes**, and **file versions**
+- 🧬 Detect and export **metadata** (UID, GID, timestamps, permissions)
+- 🧯 Handles NAND/YAFFS2 dumps from Android and embedded devices
+- 📂 Export file system tree in CSV, HTML or folder structure
+- 🔎 Designed for **digital forensic investigators**
+
+## 🧠 Use Cases
+
+- Digital forensic investigations on YAFFS2-based devices
+- Data recovery from damaged or deleted YAFFS2 partitions
+- Security auditing of embedded Linux storage
+- Forensic dumps of NAND flash from Android firmware
 
 ## Project Structure
 
@@ -245,4 +266,6 @@ Contributions are welcome!
 - Push to your fork (git push origin feature/my-feature)
 - Open a Pull Request
 
+## 🔑 Keywords
 
+yaffs2, yaffs, forensic, python, dump, recovery, flash, NAND, embedded, deleted files, partition analysis, digital forensics, orphan files, metadata, Android
