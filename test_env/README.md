@@ -558,4 +558,4 @@ Then :
 
 All snapshots, done juste after each previous operations are stored in /samples/simul_2 directory
 
-**Be carefull** all of them are compressed. Uncompress them before exploration with nand.py tool
+**Be carefull** all of them are compressed. Uncompress them before exploration with **yaffs2_parser.py** tool
