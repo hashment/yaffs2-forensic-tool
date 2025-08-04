@@ -741,4 +741,4 @@ In recup directory, there will be :
       - snapshot_12_truncate_lorem.bin.gz
       - snapshot_13_truncate_lorem_ORPHAN.bin.gz
 
-If you want to explore one of them, *do not forget* to unzip it first before running nand.py tools.
+If you want to explore one of them, **do not forget** to unzip it first before running **yaffs2_parser.py** tools.
