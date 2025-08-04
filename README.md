@@ -13,7 +13,7 @@ A standalone forensic tool written in pure Python to extract, parse, and recover
 - 🧻 Recover **deleted files**, **orphan inodes**, and **file versions**
 - 🧬 Detect and export **metadata** (UID, GID, timestamps, permissions)
 - 🧯 Handles NAND/YAFFS2 dumps from Android and embedded devices
-- 📂 Export file system tree in CSV, HTML or folder structure
+- 📂 Export file system folder structure
 - 🔎 Designed for **digital forensic investigators**
 
 ## 🧠 Use Cases
