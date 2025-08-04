@@ -647,4 +647,4 @@ In recup directory, there will be :
       - snapshot_01_add_big_lorem.bin.gz
       - snapshot_02_truncate_big_lorem.bin.gz
 
-If you want to explore one of them, *do not forget* to unzip it first before running nand.py tools.
+If you want to explore one of them, **do not forget** to unzip it first before running **yaffs2_parser.py** tools.
